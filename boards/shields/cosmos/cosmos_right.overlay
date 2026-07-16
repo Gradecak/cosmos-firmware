@@ -4,7 +4,6 @@
  */
 
 #include "./cosmos.dtsi"
-#include <nice_nano_v2.dtsi>
 
 / {
     &chosen {
