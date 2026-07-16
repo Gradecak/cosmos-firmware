@@ -6,6 +6,10 @@
 #include "cosmos.dtsi"
 
 / {
+    chosen {
+        zmk,matrix_transform = &default_transform_mirrored;
+    };
+
     default_transform_mirrored: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <6>;
@@ -22,10 +26,6 @@
                                 RC(5,5) RC(5,4) RC(5,3)
         >;
     };
-};
-
-&chosen {
-    zmk,matrix_transform = &default_transform_mirrored;
 };
 
 &kscan0 {
