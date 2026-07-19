@@ -1,0 +1,26 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // Each key is unique so you can identify which row/col is firing.
+            // Row0:              Col2=F1   Col3=F2
+            // Row1: Col0=Q  Col1=W  Col2=E  Col3=R  Col4=T  Col5=Y
+            // Row2: Col0=A  Col1=S  Col2=D  Col3=F  Col4=G  Col5=H
+            // Row3: Col0=Z  Col1=X  Col2=C  Col3=V  Col4=B  Col5=N
+            // Row4: Col0=1  Col1=2  Col2=3  Col3=4  Col4=5  Col5=6
+            // Row5:                         Col3=7  Col4=8  Col5=9
+            bindings = <
+                                &kp F1 &kp F2
+            &kp Q &kp W &kp E  &kp R  &kp T  &kp Y
+            &kp A &kp S &kp D  &kp F  &kp G  &kp H
+            &kp Z &kp X &kp C  &kp V  &kp B  &kp N
+            &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
+                                &kp N7 &kp N8 &kp N9
+            >;
+        };
+    };
+};
